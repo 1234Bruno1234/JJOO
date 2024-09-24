@@ -9,3 +9,13 @@ que realizaron cada ateleta, tambien encontraran el país y la nacionalidad de c
 Elegimos esta base de datos porque nos parecio que era una muy completa y entretenida para normalizar. Comenzamos descargando la base de datos de la páguina Kaggle
 https://www.kaggle.com/datasets/willianoliveiragibin/olympics-2024
 Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
+
+<h2>Instalación
+
+<h2>Uso
+
+<h2>Contribución
+
+<h2>Licencia
+
+<h2>Contacto
