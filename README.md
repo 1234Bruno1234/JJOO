@@ -1,17 +1,59 @@
-<h1> Normalización de Base de Datos de Juegos Olimpicos.</h1><p>
+<h1> Normalización de Base de Datos de Laptops.</h1><p>
 <h2>Introduccion</h2> <p>
 <h3>Este repositorio contiene la documentacion necesaria para poder hacer la normalizacion de una Base de Datos a partir de un archivo CSV.</h3> <p>
 ----------------------------------------------------------------------------------------------------------------------------------
-<h5>Base de datos: Atletas Juegos Olimpicos</h5>
+<h5>Base de datos: Laptops</h5>
 
-<h5>En esta base de datos encontraremos la informacion sobre todos los atletas que participaron en los juegos olimpicos 2024. Tambien encontraran las disiplinas y eventos 
-que realizaron cada ateleta, tambien encontraran el país y la nacionalidad de cada uno de ellos. </h5>
+<h5>En esta base de datos encontraremos la informacion sobre las compañias, los nombre de los productos (Laptops), la ram, el Sistema Operativo, costo, GPU model, GPU company, CPU company, CPU model, ETC. </h5>
 
 Elegimos esta base de datos porque nos parecio que era una muy completa y entretenida para normalizar. Comenzamos descargando la base de datos de la páguina Kaggle
-https://www.kaggle.com/datasets/willianoliveiragibin/olympics-2024
+
 Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
 
 <h2>Instalación
+<h3>CREACION DE TABLAS</h3>
+  
+<p>Creacion de la tabla compañia:</p>
+    CREATE TABLE compañia ( com_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  com_nomb VARCHAR(50));
+
+<p>Creacion de la tabla ram:</p>
+    CREATE TABLE ram (ram_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+ram_tmño tinyint);
+
+<p>Creacion de la tabla SO:</p>
+    CREATE TABLE so (sop_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+	sop_nomb VARCHAR(10));
+
+<p>Creacion de la tabla Precio:</p>
+    CREATE TABLE precio (pre_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL, pre_cant BIGINT);
+
+ <p>Creacion de la tabla Comañia_CPU:</p>
+    CREATE TABLE compañia_cpu (cpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpuc_nomb VARCHAR(25));
+
+<p>Creacion de la tabla Modelo_CPU:</p>    
+    CREATE TABLE modelo_cpu (cpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpum_nomb VARCHAR(50));
+    
+<p>Creacion de la tabla Modelo_GPU:</p> 
+    CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpum_nomb VARCHAR(50))
+
+<p>Creacion de la tabla Compañia_GPU:</p> 
+    CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
+
+<p>Creacion de la tabla CPU:</p> 
+    CREATE TABLE cpu (
+    cpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    cpu_mode VARCHAR(50) NOT NULL,
+    cpu_comp VARCHAR(50) NOT NULL);
+
+<p>Creacion de la tabla GPU:</p> 
+    CREATE TABLE gpu (
+    gpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    gpu_mode VARCHAR(50) NOT NULL,
+    gpu_comp VARCHAR(50) NOT NULL
+);
+
+    
+
 
 <h2>Uso
 
