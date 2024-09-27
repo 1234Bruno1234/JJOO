@@ -14,11 +14,11 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
 <h3>CREACION DE TABLAS</h3>
   
 <p>Creacion de la tabla compañia:</p>
-    CREATE TABLE compañia ( com_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  com_nomb VARCHAR(50));
+   <SQL>CREATE TABLE compañia ( com_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  com_nomb VARCHAR(50));</SQL> 
 
-<p>Creacion de la tabla ram:</p>
-    CREATE TABLE ram (ram_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
-ram_tmño tinyint);
+<h5><p>Creacion de la tabla ram:</p></h5>
+    <h5>CREATE TABLE ram (ram_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+ram_tmño tinyint);</h5>
 
 <p>Creacion de la tabla SO:</p>
     CREATE TABLE so (sop_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
