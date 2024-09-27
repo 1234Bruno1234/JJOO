@@ -20,32 +20,32 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
     <h5>CREATE TABLE ram (ram_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 ram_tmño tinyint);</h5>
 
-<p>Creacion de la tabla SO:</p>
+<h3><p>Creacion de la tabla SO:</p></h3>
     CREATE TABLE so (sop_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 	sop_nomb VARCHAR(10));
 
-<p>Creacion de la tabla Precio:</p>
+<h3><p>Creacion de la tabla Precio:</p></h3>
     CREATE TABLE precio (pre_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL, pre_cant BIGINT);
 
- <p>Creacion de la tabla Comañia_CPU:</p>
+<h3><p>Creacion de la tabla Comañia_CPU:</p></h3>
     CREATE TABLE compañia_cpu (cpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpuc_nomb VARCHAR(25));
 
-<p>Creacion de la tabla Modelo_CPU:</p>    
+<h3><p>Creacion de la tabla Modelo_CPU:</p></h3>   
     CREATE TABLE modelo_cpu (cpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpum_nomb VARCHAR(50));
     
-<p>Creacion de la tabla Modelo_GPU:</p> 
+<h3><p>Creacion de la tabla Modelo_GPU:</p></h3>
     CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpum_nomb VARCHAR(50))
 
-<p>Creacion de la tabla Compañia_GPU:</p> 
+<h3><p>Creacion de la tabla Compañia_GPU:</p></h3> 
     CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
 
-<p>Creacion de la tabla CPU:</p> 
+<h3><p>Creacion de la tabla CPU:</p></h3> 
     CREATE TABLE cpu (
     cpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     cpu_mode VARCHAR(50) NOT NULL,
     cpu_comp VARCHAR(50) NOT NULL);
 
-<p>Creacion de la tabla GPU:</p> 
+<h3><p>Creacion de la tabla GPU:</p></h3>
     CREATE TABLE gpu (
     gpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     gpu_mode VARCHAR(50) NOT NULL,
