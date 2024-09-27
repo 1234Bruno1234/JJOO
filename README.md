@@ -57,12 +57,7 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
     gpu_mode VARCHAR(50) NOT NULL,
     gpu_comp VARCHAR(50) NOT NULL
 );
-#### Tabla compañia_gpu
-```bash
-    INSERT INTO compañia_gpu(gpuc_nomb)
-    SELECT DISTINCT gpu_company
-    FROM lapt;
-```
+
 
 
 <h2>Uso
