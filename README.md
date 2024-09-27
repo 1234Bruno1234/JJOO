@@ -99,8 +99,8 @@ CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL
     FROM lapt;
 ```
 
-
-
+/// este es el diagrama de clases de la base de datos
+![Diagrama](imagen/laptop.png)
 <h2>Uso
 
 <h2>Contribución
