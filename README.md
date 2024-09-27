@@ -44,7 +44,7 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
 <h3><p>Creacion de la tabla Compañia_GPU:</p></h3> 
     CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
     	gpuc_nomb VARCHAR(50));
-<h1>Esto sacar</h1>
+<h1>Sacar tabla cpu y gpu</h1>
 <h3><p>Creacion de la tabla CPU:</p></h3> 
     CREATE TABLE cpu (
     cpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
