@@ -86,7 +86,7 @@ CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL
     SELECT DISTINCT cpu_model
     FROM lapt;
 ```
-#### Tabla modelo_cpu
+#### Tabla modelo_gpu
 ```sql
     INSERT INTO modelo_gpu(gpum_nomb)
     SELECT DISTINCT gpu_model
