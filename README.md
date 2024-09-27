@@ -14,31 +14,37 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
 <h3>CREACION DE TABLAS</h3>
   
 <p>Creacion de la tabla compañia:</p>
-   <SQL>CREATE TABLE compañia ( com_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  com_nomb VARCHAR(50));</SQL> 
+   <SQL>CREATE TABLE compañia ( com_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+	com_nomb VARCHAR(50));</SQL> 
 
 <h3><p>Creacion de la tabla ram:</p></h3>
     <h5>CREATE TABLE ram (ram_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
-ram_tmño tinyint);</h5>
+	ram_tmño tinyint);</h5>
 
 <h3><p>Creacion de la tabla SO:</p></h3>
     CREATE TABLE so (sop_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 	sop_nomb VARCHAR(10));
 
 <h3><p>Creacion de la tabla Precio:</p></h3>
-    CREATE TABLE precio (pre_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL, pre_cant BIGINT);
+    CREATE TABLE precio (pre_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+    	pre_cant BIGINT);
 
 <h3><p>Creacion de la tabla Comañia_CPU:</p></h3>
-    CREATE TABLE compañia_cpu (cpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpuc_nomb VARCHAR(25));
+    CREATE TABLE compañia_cpu (cpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+    	cpuc_nomb VARCHAR(25));
 
 <h3><p>Creacion de la tabla Modelo_CPU:</p></h3>   
-    CREATE TABLE modelo_cpu (cpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  cpum_nomb VARCHAR(50));
+    CREATE TABLE modelo_cpu (cpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+    	cpum_nomb VARCHAR(50));
     
 <h3><p>Creacion de la tabla Modelo_GPU:</p></h3>
-    CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpum_nomb VARCHAR(50))
+    CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+    	gpum_nomb VARCHAR(50))
 
 <h3><p>Creacion de la tabla Compañia_GPU:</p></h3> 
-    CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
-
+    CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
+    	gpuc_nomb VARCHAR(50));
+<h1>Esto sacar</h1>
 <h3><p>Creacion de la tabla CPU:</p></h3> 
     CREATE TABLE cpu (
     cpu_code INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
