@@ -1,6 +1,6 @@
 <h1> Normalización de Base de Datos de Laptops.</h1><p>
 <h2>Introduccion</h2> <p>
-<h3>Este repositorio contiene la documentacion necesaria para poder hacer la normalizacion de una Base de Datos a partir de un archivo CSV.</h3> <p>
+<h3>Este repositorio contiene la documentacion necesaria para poder realizar la normalizacion de una Base de Datos a partir de un archivo CSV.</h3> <p>
 ----------------------------------------------------------------------------------------------------------------------------------
 <h5>Base de datos: Laptops</h5>
 
