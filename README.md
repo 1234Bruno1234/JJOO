@@ -58,7 +58,10 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
     gpu_comp VARCHAR(50) NOT NULL
 );
 
-    
+Tabla compañia_gpu
+    INSERT INTO compañia_gpu(gpuc_nomb)
+    SELECT DISTINCT gpu_company
+    FROM lapt; 
 
 
 <h2>Uso
