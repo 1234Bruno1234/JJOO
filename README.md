@@ -14,9 +14,9 @@ Lo descargamos en un archivo CSV que es lo que te permite abrirlo en HeidiSQL.
 # Instalación
 
 ## Abrir HeidiSQL
-Una vez abierto nuestro programa para base de datos, seguir las intrucciones para poder importarla correctamente.
-  Luego de haber entrado a nuestro lugar de trabajo, nos dirigimos a la parte superior izquierda donde se encuentra la ventana Herramientas, hacemos click y buscamos la opción de "Importar archivo CSV".
-  Una vez abierto buscamos la carpeta y el archivo, nos dirigimos a la parte que dice base de datos y tabla, se creará la base de datos y apretamos el boton Importar.
+Una vez abierto nuestro programa para base de datos, seguir las intrucciones para poder importarla correctamente.<p>
+  Luego de haber entrado a nuestro lugar de trabajo, nos dirigimos a la parte superior izquierda donde se encuentra la ventana Herramientas, hacemos click y buscamos la opción de "Importar archivo CSV".<p>
+  Una vez abierto buscamos la carpeta y el archivo, nos dirigimos a la parte que dice base de datos y tabla, se creará la base de datos y apretamos el boton Importar.<p>
 
 ## CREACION DE TABLAS
   
