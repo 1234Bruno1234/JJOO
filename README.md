@@ -32,7 +32,8 @@ Se crea la base de datos y la tabla general
 
 Nos dirijimos al botón importar
 
-![importar](imagen/img5.jpg)
+![importar](imagen/img5.jpg
+)
 
 Y listo! base de datos importada con su tabla principal
 
