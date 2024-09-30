@@ -43,11 +43,11 @@ Y listo! base de datos importada con su tabla principal
 <h2><p>2. Uso</p></h2>
 
 Una vez cargada la base de datos y creada todas las tablas, nos dirigiremos a la parte inferior para seguir los pasos y comprobar que funcione correctamente.
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h2>3. Diagrama de Relación de Entidad</h2> 
 
 ![Diagrama](imagen/laptop.png)
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## 4. CREACION DE TABLAS
 
 <h2>Creamaos las tablas que usaremos en la base de datos a partir de la tabla principal.</h2>
@@ -92,8 +92,8 @@ CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 ```sql
 CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
 ```
-
-## Importación de datos
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##5 Importación de datos
 #### Tabla compañia
 ```sql
     INSERT INTO compañia(com_nomb)
@@ -136,8 +136,212 @@ CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL
     SELECT DISTINCT gpu_company
     FROM lapt;
 ```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<h2>6 Modificacion de datos</h2>
 
-## Consultas:
+<h3>Modificación de la tabla Compañia:</h3>
+
+<h4>1- Luego de hacer todos los pasos anteriores cambiamos el valor original por el código que lo identifica de la tabla compañia</h4>
+    
+
+```sql
+    UPDATE lapt
+    SET Company = ( SELECT com_code FROM compañia WHERE com_nomb = lapt.Company)
+    WHERE lapt.id > 0;
+```
+<h4>2- Se cambia el valor de la columna Company de Varchar a INT, para relacionarla con la Columna com_code de la tabla Compañía.</h4>
+
+```sql
+   ALTER TABLE lapt MODIFY Company INT NOT NULL
+```
+
+<h4>3- Colocamos el comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+  ALTER TABLE compañia MODIFY com_code INT NOT NULL;
+```
+<h4>4- Se agrega la foreign key a la columna Compnay:</h4>
+
+```sql
+  ALTER TABLE lapt ADD CONSTRAINT fk_lapt_company FOREIGN KEY (Company) REFERENCES compañia(com_code);
+```
+
+<h3>Modificación de la tabla Ram:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla ram.</h4>
+
+```sql
+ UPDATE lapt
+SET Ram = ( SELECT ram_code FROM ram WHERE ram_tmño = lapt.Ram)
+WHERE lapt.id > 0;
+```
+
+<h4>2- Se cambia el valor de la columna Ram de Varchar a INT, para relacionarla con la Columna com_code de la tabla ram.</h4>
+
+```sql
+  ALTER TABLE lapt MODIFY Ram INT NOT NULL
+```
+
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+ALTER TABLE ram MODIFY ram_code INT NOT NULL;
+```
+
+<h4>4- Se agrega la foreign key a la columna Ram:</h4>
+
+```sql
+  ALTER TABLE lapt ADD CONSTRAINT fk_lapt_ram FOREIGN KEY (Ram) REFERENCES ram(ram_code);
+```
+
+<h3>Modificación de la tabla Sistema Operativo:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla SO.</h4>
+
+```sql
+  UPDATE lapt
+  SET OS = ( SELECT sop_code FROM so WHERE sop_nomb = lapt.OS)
+  WHERE lapt.id > 0;
+```
+
+<h4>2- Se cambia el valor de la columna SO de Varchar a INT, para relacionarla con la Columna com_code de la tabla os.</h4>
+
+```sql
+  ALTER TABLE lapt MODIFY OS INT NOT NULL
+```
+
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+  ALTER TABLE so MODIFY sop_code INT NOT NULL;
+```
+
+<h4>4- Se agrega la foreign key a la columna Sistema Operativo:</h4>
+
+```sql
+  ALTER TABLE lapt ADD CONSTRAINT fk_lapt_so FOREIGN KEY (OS) REFERENCES
+  so(sop_code);
+```
+
+<h3>Modificación de la tabla Compañia_CPU:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla cpu_company</h4>
+
+```sql
+UPDATE lapt
+SET CPU_company = ( SELECT cpuc_code FROM compañia_cpu WHERE cpuc_nomb = lapt.CPU_company)
+WHERE lapt.id > 0;
+```
+
+<h4>2- Se cambia el valor de la columna compañia_cpu de Varchar a INT, para relacionarla con la Columna com_code de la tabla cpu_company.</h4>
+
+```sql
+ALTER TABLE lapt MODIFY CPU_company  INT NOT NULL
+```
+
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+ALTER TABLE compañia_cpu MODIFY cpuc_code INT NOT NULL;
+```
+<h4>4- Se agrega la foreign key a la columna Compañia_cpu:</h4>
+
+```sql
+ALTER TABLE lapt ADD CONSTRAINT fk_lapt_compañia_cpu FOREIGN KEY (CPU_company) REFERENCES compañia_cpu(cpuc_code);
+```
+<h3>Modificación de la tabla Modelo_CPU:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla cpu_moel</h4>
+
+```sql
+UPDATE lapt
+SET CPU_model = ( SELECT cpum_code FROM modelo_cpu WHERE cpum_nomb = lapt.CPU_model)
+WHERE lapt.id > 0;
+```
+<h4>2- Se cambia el valor de la columna Modelo_cpu de Varchar a INT, para relacionarla con la Columna com_code de la tabla cpu_moel.</h4>
+
+```sql
+ALTER TABLE lapt MODIFY CPU_model  INT NOT NULL
+```
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+ ALTER TABLE modelo_cpu MODIFY cpum_code INT NOT NULL;
+```
+<h4>4- Se agrega la foreign key a la columna Modelo_cpu:</h4>
+
+```sql
+ALTER TABLE lapt ADD CONSTRAINT fk_lapt_modelo_cpu FOREIGN KEY (CPU_model) REFERENCES modelo_cpu(cpum_code);
+```
+
+<h3>Modificación de la tabla Compañia_GPU:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla gpu_company:</h4>
+
+```sql
+UPDATE lapt
+SET GPU_company = ( SELECT gpuc_code FROM compañia_gpu WHERE gpuc_nomb = lapt.GPU_company)
+WHERE lapt.id > 0;
+```
+
+<h4>2- Se cambia el valor de la columna Compañia_gpu de Varchar a INT, para relacionarla con la Columna com_code de la tabla GPU_company.</h4>
+
+```sql
+ALTER TABLE lapt MODIFY GPU_company  INT NOT NULL
+```
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+ALTER TABLE compañia_gpu MODIFY gpuc_code INT NOT NULL;
+```
+<h4>4- Se agrega la foreign key a la columna Compañia_gpu:</h4>
+
+```sql
+ALTER TABLE lapt ADD CONSTRAINT fk_lapt_compañia_gpu FOREIGN KEY (GPU_company) REFERENCES compañia_gpu(gpuc_code);
+```
+
+<h3>Modificación de la tabla Modelo_GPU:</h3>
+
+<h4>1- Cambiamos valor original por el código que lo identifica de la tabla GPU_moel</h4>
+
+```sql
+UPDATE lapt
+SET GPU_model = ( SELECT gpum_code FROM modelo_gpu WHERE gpum_nomb = lapt.GPU_model)
+WHERE lapt.id > 0;
+```
+<h4>2- Se cambia el valor de la columna Modelo_gup de Varchar a INT, para relacionarla con la Columna com_code de la tabla GPU_model.</h4>
+
+```sql
+ ALTER TABLE lapt MODIFY GPU_model  INT NOT NULL
+```
+<h4>3- Comando para cambiar el valor de la columna a INT.</h4>
+
+```sql
+ALTER TABLE modelo_gpu MODIFY gpum_code INT NOT NULL;
+```
+<h4>4- Se agrega la foreign key a la columna Modelo_gpu:</h4>
+
+```sql
+ALTER TABLE lapt ADD CONSTRAINT fk_lapt_modelo_gpu FOREIGN KEY (GPU_model) REFERENCES modelo_gpu(gpum_code);
+```
+--------------------------------------------------------------------------------
+<h2>7 Modificacion de valores</h2>
+
+<h3>Modificamos los valores de las tablas a decimal:</h3>
+
+```sql
+ALTER TABLE lapt
+MODIFY price_euros DECIMAL,
+MODIFY inches DECIMAL,
+MODIFY Weight DECIMAL,
+MODIFY screenw DECIMAL,
+MODIFY screenh DECIMAL,
+MODIFY cpu_freq DECIMAL,
+MODIFY primarystorage DECIMAL;
+```
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+##8 Consultas:
 1- Mostrar los productos que pertenecen a una cierta compañia y que tengan una ram menor a 16 y que el precio sea mayor a 2500 euros.
 ```sql
    SELECT product AS producto, company AS compañia, price_euros AS precio_en_euros, ram AS ram 
