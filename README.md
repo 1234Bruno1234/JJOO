@@ -47,7 +47,7 @@ Una vez cargada la base de datos y creada todas las tablas, nos dirigiremos a la
 
 ![Diagrama](imagen/laptop.png)
 
-##4. CREACION DE TABLAS
+## 4. CREACION DE TABLAS
 
 <h2>Creamaos las tablas que usaremos en la base de datos a partir de la tabla principal.</h2>
   
@@ -92,7 +92,7 @@ CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
 ```
 
-# Importación de datos
+## Importación de datos
 #### Tabla compañia
 ```sql
     INSERT INTO compañia(com_nomb)
@@ -136,35 +136,35 @@ CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL
     FROM lapt;
 ```
 
-<h2>Consultas:</h2>
-<p>1- Mostrar los productos que pertenecen a una cierta compañia y que tengan una ram menor a 16 y que el precio sea mayor a 2500 euros.</p>
+## Consultas:
+1- Mostrar los productos que pertenecen a una cierta compañia y que tengan una ram menor a 16 y que el precio sea mayor a 2500 euros.
 ```sql
    SELECT product AS producto, company AS compañia, price_euros AS precio_en_euros, ram AS ram 
 FROM lapt
 WHERE ram < 16 AND price_euros > 2500;
 ```
 
-<p>2- Calcular el precio promedio de los laptops por compañía:</p>
+2- Calcular el precio promedio de los laptops por compañía:
 ```sql
 SELECT company AS compañia, AVG(price_euros) AS precio_promedio
 FROM lapt
 GROUP BY company;
 ```
-<p>3-Encontrar las compañías que tienen más de 10 modelos de laptops:</p>
+3-Encontrar las compañías que tienen más de 10 modelos de laptops:
 ```sql
 SELECT company AS compañia, COUNT(*) AS cantidad_modelos
 FROM lapt
 GROUP BY company
 HAVING COUNT(*) > 10;
 ```
-<p>4- Todas las laptops con Sistema operativo Windows 10.</p>
+4- Todas las laptops con Sistema operativo Windows 10.
 ```sql
 SELECT l.Product AS Laptop, s.sop_nomb AS SistemaOperativo
 FROM lapt l
 JOIN so s ON l.OS = s.sop_code 
 WHERE s.sop_nomb = 'Windows 10';
 ```
-<p>5-Todos los productos de la compañia Dell.</p>
+5-Todos los productos de la compañia Dell.
 ```sql
 SELECT DISTINCT c.com_nomb AS Compañia, l.Product AS Producto
 FROM lapt l
@@ -172,7 +172,7 @@ JOIN compañia c ON l.Company = c.com_code
 WHERE c.com_nomb ='Dell';
 ```
 
-<p>6- Mostrar compañía ‘Acer’, el modelo con la cantidad total de cada uno, la ram y el precio.</p>
+6- Mostrar compañía ‘Acer’, el modelo con la cantidad total de cada uno, la ram y el precio.
 ```sql
 SELECT c.com_nomb AS Compañia, l.Product AS Modelo, COUNT(l.Product) AS CantidadDeModelos, price_euros AS Precio, Ram AS ram
 FROM lapt l
@@ -180,10 +180,11 @@ JOIN compañia c ON l.Company = c.com_code
 WHERE l.Company = 3
 GROUP BY c.com_nomb, l.Product;
 ```
+## Conclusión
+Como conlusión podemos decir que pudimos cumplir con el objetivo, que era terminar el trabajo y entregarlo. 
+Las herramientas que utilizamos para trabajar la base de datos fueron varias, entre ellas el Heidi, Workbench, Xampp y Docker. 
+Al principio, optamos por la base de datos de los Juegos Olimpicos de Paris, pero mediante avanzabamos aparecian mas problemas, y a falta de una semana de entrega, cambiamos la base de datos por otra y tuvimos que empezar desde cero. Con todos los problemas y trabas que se nos presentaron, pudimos terminar y entregar a tiempo.
 
-
-<h2>Contribución
-
-<h2>Licencia
-
-<h2>Contacto
+## Bibliografía
+Archivo csv sacado desde https://www.kaggle.com/datasets/owm4096/laptop-prices
+paginas donde buscamos informacio: geminis.google.com,https://www.w3schools.com/sql/default.asp
