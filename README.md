@@ -325,7 +325,7 @@ ALTER TABLE modelo_gpu MODIFY gpum_code INT NOT NULL;
 ```sql
 ALTER TABLE lapt ADD CONSTRAINT fk_lapt_modelo_gpu FOREIGN KEY (GPU_model) REFERENCES modelo_gpu(gpum_code);
 ```
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h2>7 Modificacion de valores</h2>
 
 <h3>Modificamos los valores de las tablas a decimal:</h3>
@@ -342,7 +342,7 @@ MODIFY primarystorage DECIMAL;
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-##8 Consultas:
+<h2>8 Consultas:</h2>
 1- Mostrar los productos que pertenecen a una cierta compañia y que tengan una ram menor a 16 y que el precio sea mayor a 2500 euros.
 ```sql
    SELECT product AS producto, company AS compañia, price_euros AS precio_en_euros, ram AS ram 
