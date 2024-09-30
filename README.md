@@ -18,7 +18,26 @@ Una vez abierto nuestro programa para base de datos, seguir las intrucciones par
   Luego de haber entrado a nuestro lugar de trabajo, nos dirigimos a la parte superior izquierda donde se encuentra la ventana Herramientas, hacemos click y buscamos la opción de "Importar archivo CSV".<p>
 ![Importacion de datos](imagen/img/img1.jpg)
 
-  Una vez abierto buscamos la carpeta y el archivo, nos dirigimos a la parte que dice base de datos y tabla, se creará la base de datos y apretamos el boton Importar.<p>
+Una vez abierto buscamos la carpeta y el archivo
+
+![Creacion de tabla](imagen/img2.jpg)
+
+Nos dirigimos a la parte que dice base de datos y tabla
+
+![Base de datos](imagen/img3.jpg)
+
+Se crea la base de datos y la tabla general
+
+![Tabla](imagen/img4.jpg)
+
+Nos dirijimos al botón importar
+
+![importar](imagen/img5.jpg)
+
+Y listo! base de datos importada con su tabla principal
+
+![Tabla](imagen/img6.jpg)
+
 
 <h2><p>2. Uso</p></h2>
 
