@@ -93,7 +93,8 @@ CREATE TABLE modelo_gpu (gpum_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  
 CREATE TABLE compañia_gpu (gpuc_code BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL,  gpuc_nomb VARCHAR(50));
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-##5 Importación de datos
+<h2>5 Importación de datos</h2>
+
 #### Tabla compañia
 ```sql
     INSERT INTO compañia(com_nomb)
